@@ -9,7 +9,9 @@ const options = {
     nav: false,
     dots: false,
     autoplay: true,
-    smartSpeed: 700
+    smartSpeed: 1000,
+    autoplayTimeout: 5000,
+    autoplayHoverPause: true,
 };
 
 const Testimonials = () => {
