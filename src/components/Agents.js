@@ -47,7 +47,7 @@ const Agents = () => {
                             }
                         </div>
                         <div className="mt-6 sm:mt-12 sm:text-center">
-                            <h2 className="text-3xl font-black tracking-tight text-gray-900 sm:text-4xl md:text-5xl md:leading-tight md:max-w-4xl md:mx-auto">{agent.content}<span className="text-primary">.</span></h2>
+                            <h2 className="text-3xl font-black tracking-tight text-gray-900 md:text-4xl 2xl:text-5xl md:leading-tight md:max-w-4xl md:mx-auto">{agent.content}<span className="text-primary">.</span></h2>
                         </div>
                         <div className="mt-6 sm:mt-12 sm:mx-auto sm:max-w-lg flex flex-col items-center"></div>
                     </div>

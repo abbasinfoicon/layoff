@@ -3067,6 +3067,10 @@ select {
   .\32xl\:pl-20 {
     padding-left: 5rem;
   }
+
+  .\32xl\:text-5xl {
+    font-size: 3rem;
+  }
 }
 
 html,
@@ -5392,7 +5396,9 @@ section#r1ggg8sk05 {
 .custom-width {}
 
 @media (max-width: 1536px) {
-  .custom-width img, .img3 {
+
+  .custom-width img,
+  .img3 {
     width: 53%;
   }
 }
