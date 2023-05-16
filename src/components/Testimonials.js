@@ -1,4 +1,16 @@
 import React, { useEffect, useState } from 'react'
+import OwlCarousel from "react-owl-carousel";
+
+const options = {
+    animateIn: 'fadeIn',
+    animateOut: 'fadeOut',
+    items: 1,
+    loop: true,
+    nav: false,
+    dots: false,
+    autoplay: true,
+    smartSpeed: 700
+};
 
 const Testimonials = () => {
     const [testimonial, setTestimonial] = useState({});
@@ -29,20 +41,37 @@ const Testimonials = () => {
                 </svg>
 
                 <div className="relative">
-                    <blockquote>
-                        <div className="max-w-3xl mx-auto text-xl font-bold leading-7 text-center text-white md:leading-10 md:text-3xl text-shadow-sm">
-                            <p> &quot;{testimonial.content}&quot; </p>
-                        </div>
-                        <footer className="mt-8">
-                            <div className="md:flex md:items-center md:justify-center">
-                                <div className="md:flex-shrink-0">
-                                    <img src={testimonial.authorImg} className="w-10 h-10 mx-auto border-2 border-slate-200 rounded-full shadow-sm object-cover" alt="Testimonial" /></div>
-                                <div className="mt-3 text-center md:mt-0 md:ml-3 md:flex md:items-center text-shadow-sm">
-                                    <div className="text-lg font-medium text-white">{testimonial.author}</div>
-                                </div>
+                    <OwlCarousel {...options}>
+                        <blockquote>
+                            <div className="max-w-3xl mx-auto text-xl font-bold leading-7 text-center text-white md:leading-10 md:text-3xl text-shadow-sm">
+                                <p> &quot;{testimonial.content}&quot; </p>
                             </div>
-                        </footer>
-                    </blockquote>
+                            <footer className="mt-8">
+                                <div className="md:flex md:items-center md:justify-center">
+                                    <div className="md:flex-shrink-0">
+                                        <img src={testimonial.authorImg} className="w-10 h-10 mx-auto border-2 border-slate-200 rounded-full shadow-sm object-cover" alt="Testimonial" /></div>
+                                    <div className="mt-3 text-center md:mt-0 md:ml-3 md:flex md:items-center text-shadow-sm">
+                                        <div className="text-lg font-medium text-white">{testimonial.author}</div>
+                                    </div>
+                                </div>
+                            </footer>
+                        </blockquote>
+
+                        <blockquote>
+                            <div className="max-w-3xl mx-auto text-xl font-bold leading-7 text-center text-white md:leading-10 md:text-3xl text-shadow-sm">
+                                <p> &quot;{testimonial.content}&quot; </p>
+                            </div>
+                            <footer className="mt-8">
+                                <div className="md:flex md:items-center md:justify-center">
+                                    <div className="md:flex-shrink-0">
+                                        <img src={testimonial.authorImg} className="w-10 h-10 mx-auto border-2 border-slate-200 rounded-full shadow-sm object-cover" alt="Testimonial" /></div>
+                                    <div className="mt-3 text-center md:mt-0 md:ml-3 md:flex md:items-center text-shadow-sm">
+                                        <div className="text-lg font-medium text-white">{testimonial.author}</div>
+                                    </div>
+                                </div>
+                            </footer>
+                        </blockquote>
+                    </OwlCarousel>
                 </div>
             </div>
         </section>
