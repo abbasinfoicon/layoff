@@ -5384,7 +5384,15 @@ section#r1ggg8sk05 {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(280deg,
-  #83f7e3 -1.19%,
-  #91bd4a 50.96%,
-  #316b4f 99.95%);
+      #83f7e3 -1.19%,
+      #91bd4a 50.96%,
+      #316b4f 99.95%);
+}
+
+.custom-width {}
+
+@media (max-width: 1536px) {
+  .custom-width img, .img3 {
+    width: 53%;
+  }
 }

@@ -55,9 +55,11 @@ const Slider = () => {
                                 <rect width="404" height="392" fill="url(#837c3e70-6c3a-44e6-8854-cc48c737b659)"></rect>
                             </svg>
                         </div>
-                        <div className="relative pl-4 ml-auto sm:max-w-3xl sm:px-0 lg:h-full lg:max-w-none lg:flex lg:items-center xl:pl-12">
+
+                        <div className="relative pl-4 ml-auto sm:max-w-3xl sm:px-0 lg:h-full lg:max-w-none lg:flex lg:items-center xl:pl-12 custom-width">
                             <img className="w-full rounded-l-3xl lg:w-auto 2xl:h-full 2xl:max-w-none 2xl:rounded-3xl" src={slide.img} />
-                            <img className="rounded-l-3xl lg:w-auto  2xl:max-w-none 2xl:rounded-3xl" src={slide.img2} /></div>
+                            <img className="rounded-l-3xl lg:w-auto  2xl:max-w-none 2xl:rounded-3xl" src={slide.img2} />
+                        </div>
                     </div>
                 </div>
             </div>

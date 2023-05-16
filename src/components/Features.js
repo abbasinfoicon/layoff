@@ -35,9 +35,9 @@ const Features = () => {
 
                                 <div className={`${(index + 1) % 2 == 0 ? "" : "lg:col-start-1"} mt-12 sm:mt-16 lg:mt-0`}>
                                     <div className={`${(index + 1) % 2 == 0 ? "pl-4 sm:-mr-48 sm:-mr-6 sm:pl-6 md:-mr-16" : "pr-4 -sm:ml-48 sm:pr-6 md:-ml-16"} lg:px-0 lg:m-0 lg:relative lg:h-full lg:flex lg:items-center`}>
-                                        <img src={item.img} className={`${(index + 1) % 2 == 0 ? "" : "w-full 2xl:max-h-[44rem] lg:right-0 rounded-r-2xl"}`} alt="Early notifications" />
+                                        <img src={item.img} className={`${(index + 1) % 2 == 0 ? "" : "w-full 2xl:max-h-[44rem]"} lg:right-0 rounded-r-2xl`} alt="Early notifications" />
                                         {
-                                            item.img2 ? <img src={item.img2} className="lg:right-0 rounded-r-2xl" alt="Personalized alerts" /> : ''
+                                            item.img2 ? <img src={item.img2} className="lg:right-0 rounded-r-2xl img3" alt="Personalized alerts" /> : ''
                                         }
                                     </div>
                                 </div>
