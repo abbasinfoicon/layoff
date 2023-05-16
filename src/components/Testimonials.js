@@ -13,7 +13,7 @@ const options = {
 };
 
 const Testimonials = () => {
-    const [testimonial, setTestimonial] = useState({});
+    const [testimonial, setTestimonial] = useState([]);
     const getData = () => {
         fetch('data.json').then(res => {
             return res.json();
@@ -25,7 +25,7 @@ const Testimonials = () => {
         getData()
     }, [])
 
-    // console.log("testimonial", testimonial)
+    console.log("testimonial", testimonial)
 
     return (
         <section className="py-12 overflow-hidden bg-primary bg-opacity-80 md:py-20">
@@ -41,37 +41,30 @@ const Testimonials = () => {
                 </svg>
 
                 <div className="relative">
-                    <OwlCarousel {...options}>
-                        <blockquote>
-                            <div className="max-w-3xl mx-auto text-xl font-bold leading-7 text-center text-white md:leading-10 md:text-3xl text-shadow-sm">
-                                <p> &quot;{testimonial.content}&quot; </p>
-                            </div>
-                            <footer className="mt-8">
-                                <div className="md:flex md:items-center md:justify-center">
-                                    <div className="md:flex-shrink-0">
-                                        <img src={testimonial.authorImg} className="w-10 h-10 mx-auto border-2 border-slate-200 rounded-full shadow-sm object-cover" alt="Testimonial" /></div>
-                                    <div className="mt-3 text-center md:mt-0 md:ml-3 md:flex md:items-center text-shadow-sm">
-                                        <div className="text-lg font-medium text-white">{testimonial.author}</div>
-                                    </div>
-                                </div>
-                            </footer>
-                        </blockquote>
-
-                        <blockquote>
-                            <div className="max-w-3xl mx-auto text-xl font-bold leading-7 text-center text-white md:leading-10 md:text-3xl text-shadow-sm">
-                                <p> &quot;{testimonial.content}&quot; </p>
-                            </div>
-                            <footer className="mt-8">
-                                <div className="md:flex md:items-center md:justify-center">
-                                    <div className="md:flex-shrink-0">
-                                        <img src={testimonial.authorImg} className="w-10 h-10 mx-auto border-2 border-slate-200 rounded-full shadow-sm object-cover" alt="Testimonial" /></div>
-                                    <div className="mt-3 text-center md:mt-0 md:ml-3 md:flex md:items-center text-shadow-sm">
-                                        <div className="text-lg font-medium text-white">{testimonial.author}</div>
-                                    </div>
-                                </div>
-                            </footer>
-                        </blockquote>
-                    </OwlCarousel>
+                    {testimonial.length &&
+                        <OwlCarousel {...options}>
+                            {
+                                testimonial?.map((item, index) => {
+                                    return (
+                                        <blockquote key={index}>
+                                            <div className="max-w-3xl mx-auto text-xl font-bold leading-7 text-center text-white md:leading-10 md:text-3xl text-shadow-sm">
+                                                <p> &quot;{item.content}&quot; </p>
+                                            </div>
+                                            <footer className="mt-8">
+                                                <div className="md:flex md:items-center md:justify-center">
+                                                    <div className="md:flex-shrink-0">
+                                                        <img src={item.authorImg} className="w-10 h-10 mx-auto border-2 border-slate-200 rounded-full shadow-sm object-cover" alt="Testimonial" /></div>
+                                                    <div className="mt-3 text-center md:mt-0 md:ml-3 md:flex md:items-center text-shadow-sm">
+                                                        <div className="text-lg font-medium text-white">{item.author}</div>
+                                                    </div>
+                                                </div>
+                                            </footer>
+                                        </blockquote>
+                                    )
+                                })
+                            }
+                        </OwlCarousel>
+                    }
                 </div>
             </div>
         </section>

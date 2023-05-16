@@ -25,12 +25,32 @@
             "android": "#"
         }
     ],
-    "testimonials": {
-        "id": 1,
-        "content": "LayoffAlert allowed me to communicate with management directly and receive updates as they happened. It made a difficult situation a bit easier.",
-        "author": "Sara Ermington",
-        "authorImg": "assets/images/avatar10.jpg"
-    },
+    "testimonials": [
+        {
+            "id": 1,
+            "content": "LayoffAlert allowed me to communicate with management directly and receive updates as they happened. It made a difficult situation a bit easier.",
+            "author": "Sara Ermington",
+            "authorImg": "assets/images/avatar7.jpg"
+        },
+        {
+            "id": 2,
+            "content": "It made a difficult situation a bit easier. LayoffAlert allowed me to communicate with management directly and receive updates as they happened.",
+            "author": "Ermington Sara",
+            "authorImg": "assets/images/avatar8.jpg"
+        },
+        {
+            "id": 3,
+            "content": "LayoffAlert allowed me to communicate with management directly and receive updates as they happened. It made a difficult situation a bit easier.",
+            "author": "Sara Ermington",
+            "authorImg": "assets/images/avatar9.jpg"
+        },
+        {
+            "id": 4,
+            "content": "It made a difficult situation a bit easier. LayoffAlert allowed me to communicate with management directly and receive updates as they happened.",
+            "author": "Ermington Sara",
+            "authorImg": "assets/images/avatar10.jpg"
+        }
+    ],
     "agents": {
         "id": 1,
         "content": "We have a team in backend and our automated agents are monitoring 100s of data sources to get this information to you.",
